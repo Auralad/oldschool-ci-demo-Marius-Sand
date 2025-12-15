@@ -1,4 +1,4 @@
-- name: Container starten & testen 
+name: Container starten & testen 
 
 
 on:
@@ -10,3 +10,16 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
+   
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Docker Version prüfen
+        run: docker --version
+
+      - name: oldschool-demo-image-Marius-Sand
+        run: docker build -t mein-image .        
+
+      - name: Container starten
+        run: docker run mein-image
