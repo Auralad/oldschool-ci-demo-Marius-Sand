@@ -19,7 +19,7 @@ jobs:
         run: docker --version
 
       - name: oldschool-demo-image-Marius-Sand
-        run: docker build -t mein-image .        
+        run: docker build -t Container starten & testen        
 
       - name: Container starten
-        run: docker run mein-image
+        run: docker run Container starten & testen
