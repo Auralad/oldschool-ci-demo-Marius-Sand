@@ -8,7 +8,7 @@ FROM alpine:latest
 COPY app.sh /app.sh
 
 #Skript ausführbar machen
-RUN chmod +x/app.sh
+RUN chmod +x /app.sh
 
 #Container startet mit dem Skript
 ENTRYPOINT ["/app.sh"] 
