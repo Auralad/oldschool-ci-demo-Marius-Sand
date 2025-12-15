@@ -2,7 +2,10 @@
 
 
 #Minimaler Alpine-Container
-From alpine:latest
+FROM alpine:latest
 
 #Skript app.sh in den container koppieren
-copy app.sh/app.sh
+COPY app.sh /app.sh
+
+#Skript ausführbar machen
+RUN chmod +x/app.sh
